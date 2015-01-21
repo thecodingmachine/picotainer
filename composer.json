@@ -22,12 +22,12 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"Mouf\\" : "src/"
+			"Mouf\\Picotainer\\" : "src/"
 		}
-	},
-  "autoload" : {
-	  "psr-4" : {
-		  "Mouf\\" : "tests/"
-	  }
-  }
+	}
+	"autoload-dev" : {
+		"psr-4" : {
+			"Mouf\\Picotainer\\" : "tests/"
+		}
+	}
 }

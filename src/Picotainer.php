@@ -19,17 +19,29 @@ class Picotainer implements ContainerInterface
     protected $delegateLookupContainer;
 
     /**
-     * Instantiate the container.
-     *
-     * Objects and parameters can be passed as argument to the constructor.
-     *
-     * @param ContainerInterface $container The root container of the application (if any)
-     * @param array              $values    The parameters or objects.
+     * The array of closure defining each entry of the container.
+     * 
+     * @var array<string, Closure>
      */
-    public function __construct(array $entries = array(), ContainerInterface $delegateLookupContainer = null)
+    protected $callbacks;
+    
+    /**
+     * The array of entries once they have been instanciated.
+     * 
+     * @var array<string, mixed>
+     */
+    protected $objects;
+    
+    /**
+     * Instantiate the container.
+     * 
+     * @param array<string, Closure> $entries Entries must be passed as an array of anonymous functions
+     * @param ContainerInterface $delegateLookupContainer Optionnal delegate lookup container.
+     */
+    public function __construct(array $entries, ContainerInterface $delegateLookupContainer = null)
     {
+    	$this->callbacks = $entries;
         $this->delegateLookupContainer = $delegateLookupContainer ?: $this;
-        // TODO
     }
 
     /* (non-PHPdoc)
@@ -37,7 +49,13 @@ class Picotainer implements ContainerInterface
      */
     public function get($identifier)
     {
-        // TODO
+    	if (isset($this->objects[$identifier])) {
+    		return $this->objects[$identifier];
+    	}
+    	if (!isset($this->callbacks[$identifier])) {
+    		throw new PicotainerNotFoundException(sprintf('Identifier "%s" is not defined.', $identifier));
+    	}
+    	return $this->objects[$identifier] = $this->callbacks[$identifier]();
     }
 
     /* (non-PHPdoc)
@@ -45,6 +63,6 @@ class Picotainer implements ContainerInterface
      */
     public function has($identifier)
     {
-        // TODO
+        return isset($this->callbacks[$identifier]);
     }
 }
