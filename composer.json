@@ -1,0 +1,33 @@
+{
+	"name" : "mouf/picotainer",
+	"description" : "This package contains a really minimalist dependency injection container compatible with container-interop.",
+	"authors" : [{
+			"name" : "David Négrier",
+			"email" : "d.negrier@thecodingmachine.com",
+			"homepage" : "http://mouf-php.com"
+		}
+	],
+	"keywords" : [
+		"dependency injection",
+		"DI",
+		"container-interop"
+	],
+	"homepage" : "http://mouf-php.com",
+	"license" : "MIT",
+	"require" : {
+		"container-interop/container-interop" : "~1.0"
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "~3.7"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Mouf\\" : "src/"
+		}
+	},
+  "autoload" : {
+	  "psr-4" : {
+		  "Mouf\\" : "tests/"
+	  }
+  }
+}
