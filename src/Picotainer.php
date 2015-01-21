@@ -56,7 +56,7 @@ class Picotainer implements ContainerInterface
             throw new PicotainerNotFoundException(sprintf('Identifier "%s" is not defined.', $identifier));
         }
 
-        return $this->objects[$identifier] = $this->callbacks[$identifier]();
+        return $this->objects[$identifier] = $this->callbacks[$identifier]($this->delegateLookupContainer);
     }
 
     /* (non-PHPdoc)
