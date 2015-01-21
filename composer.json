@@ -24,7 +24,7 @@
 		"psr-4" : {
 			"Mouf\\Picotainer\\" : "src/"
 		}
-	}
+	},
 	"autoload-dev" : {
 		"psr-4" : {
 			"Mouf\\Picotainer\\" : "tests/"
