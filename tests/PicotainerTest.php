@@ -18,6 +18,17 @@ class PicotainerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('value', $container->get('instance'));
     }
 
+    /**
+     *
+     * @expectedException Mouf\Picotainer\PicotainerNotFoundException
+     */
+    public function testGetException()
+    {
+        $container = new Picotainer([]);
+
+        $container->get('nonexistant');
+    }
+
     public function testDelegateContainer()
     {
         $container = new Picotainer([
