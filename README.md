@@ -3,9 +3,7 @@ Picotainer
 [![Latest Stable Version](https://poser.pugx.org/mouf/picotainer/v/stable.svg)](https://packagist.org/packages/mouf/picotainer)
 [![Latest Unstable Version](https://poser.pugx.org/mouf/picotainer/v/unstable.svg)](https://packagist.org/packages/mouf/picotainer)
 [![License](https://poser.pugx.org/mouf/picotainer/license.svg)](https://packagist.org/packages/mouf/picotainer)
-
-TODO: change Sensiolabs insight
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/98d5c42d-9d46-4e73-936d-6eac8b92b3c3/mini.png)](https://insight.sensiolabs.com/projects/98d5c42d-9d46-4e73-936d-6eac8b92b3c3)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/3ac43eac-dcec-496a-9e0f-5fe82f8b3824/mini.png)](https://insight.sensiolabs.com/projects/3ac43eac-dcec-496a-9e0f-5fe82f8b3824)
 
 This package contains a really minimalist dependency injection container compatible with 
 [container-interop](https://github.com/container-interop/container-interop) (supports ContainerInterface and

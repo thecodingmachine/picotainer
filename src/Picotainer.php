@@ -20,27 +20,27 @@ class Picotainer implements ContainerInterface
 
     /**
      * The array of closure defining each entry of the container.
-     * 
+     *
      * @var array<string, Closure>
      */
     protected $callbacks;
-    
+
     /**
      * The array of entries once they have been instanciated.
-     * 
+     *
      * @var array<string, mixed>
      */
     protected $objects;
-    
+
     /**
      * Instantiate the container.
-     * 
-     * @param array<string, Closure> $entries Entries must be passed as an array of anonymous functions
-     * @param ContainerInterface $delegateLookupContainer Optionnal delegate lookup container.
+     *
+     * @param array<string, Closure> $entries                 Entries must be passed as an array of anonymous functions
+     * @param ContainerInterface     $delegateLookupContainer Optionnal delegate lookup container.
      */
     public function __construct(array $entries, ContainerInterface $delegateLookupContainer = null)
     {
-    	$this->callbacks = $entries;
+        $this->callbacks = $entries;
         $this->delegateLookupContainer = $delegateLookupContainer ?: $this;
     }
 
@@ -49,13 +49,14 @@ class Picotainer implements ContainerInterface
      */
     public function get($identifier)
     {
-    	if (isset($this->objects[$identifier])) {
-    		return $this->objects[$identifier];
-    	}
-    	if (!isset($this->callbacks[$identifier])) {
-    		throw new PicotainerNotFoundException(sprintf('Identifier "%s" is not defined.', $identifier));
-    	}
-    	return $this->objects[$identifier] = $this->callbacks[$identifier]();
+        if (isset($this->objects[$identifier])) {
+            return $this->objects[$identifier];
+        }
+        if (!isset($this->callbacks[$identifier])) {
+            throw new PicotainerNotFoundException(sprintf('Identifier "%s" is not defined.', $identifier));
+        }
+
+        return $this->objects[$identifier] = $this->callbacks[$identifier]();
     }
 
     /* (non-PHPdoc)
