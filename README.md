@@ -4,6 +4,8 @@ Picotainer
 [![Latest Unstable Version](https://poser.pugx.org/mouf/picotainer/v/unstable.svg)](https://packagist.org/packages/mouf/picotainer)
 [![License](https://poser.pugx.org/mouf/picotainer/license.svg)](https://packagist.org/packages/mouf/picotainer)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/3ac43eac-dcec-496a-9e0f-5fe82f8b3824/mini.png)](https://insight.sensiolabs.com/projects/3ac43eac-dcec-496a-9e0f-5fe82f8b3824)
+[![Build Status](https://travis-ci.org/thecodingmachine/picotainer.svg?branch=1.0)](https://travis-ci.org/thecodingmachine/picotainer)
+[![Coverage Status](https://coveralls.io/repos/thecodingmachine/picotainer/badge.svg)](https://coveralls.io/r/thecodingmachine/picotainer)
 
 This package contains a really minimalist dependency injection container compatible with 
 [container-interop](https://github.com/container-interop/container-interop) (supports ContainerInterface and
