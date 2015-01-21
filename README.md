@@ -3,11 +3,12 @@ Picotainer
 [![Latest Stable Version](https://poser.pugx.org/mouf/picotainer/v/stable.svg)](https://packagist.org/packages/mouf/picotainer)
 [![Latest Unstable Version](https://poser.pugx.org/mouf/picotainer/v/unstable.svg)](https://packagist.org/packages/mouf/picotainer)
 [![License](https://poser.pugx.org/mouf/picotainer/license.svg)](https://packagist.org/packages/mouf/picotainer)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/thecodingmachine/picotainer/badges/quality-score.png?b=1.0)](https://scrutinizer-ci.com/g/thecodingmachine/picotainer/?branch=1.0)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/3ac43eac-dcec-496a-9e0f-5fe82f8b3824/mini.png)](https://insight.sensiolabs.com/projects/3ac43eac-dcec-496a-9e0f-5fe82f8b3824)
 [![Build Status](https://travis-ci.org/thecodingmachine/picotainer.svg?branch=1.0)](https://travis-ci.org/thecodingmachine/picotainer)
 [![Coverage Status](https://coveralls.io/repos/thecodingmachine/picotainer/badge.svg)](https://coveralls.io/r/thecodingmachine/picotainer)
 
-This package contains a really minimalist dependency injection container compatible with 
+This package contains a really minimalist dependency injection container (24 lines of code!) compatible with 
 [container-interop](https://github.com/container-interop/container-interop) (supports ContainerInterface and
 delegate lookup feature).
 
@@ -16,6 +17,7 @@ as a Pimple container with even less features, and ContainerInterop compatibilit
 
 Installation
 ------------
+
 Before using Picotainer in your project, add it to your `composer.json` file:
 
 ```
@@ -72,7 +74,7 @@ $myInstance = $container->get('myInstance');
 
 Why the need for this package?
 ------------------------------
+
 This package is part of a long-term effort to bring [interoperability between DI containers](https://github.com/container-interop/container-interop). The ultimate goal is to
 make sure that multiple containers can communicate together by sharing entries (one container might use an entry from another
 container, etc...)
-
