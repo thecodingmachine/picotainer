@@ -42,6 +42,18 @@ class PicotainerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('value', $container2->get('instance2'));
     }
 
+    public function testOneInstanceOnly()
+    {
+        $container = new Picotainer([
+                "instance" => function () { return new \stdClass(); },
+        ]);
+
+        $instance1 = $container->get('instance');
+        $instance2 = $container->get('instance');
+
+        $this->assertEquals($instance1, $instance2);
+    }
+
     public function testHas()
     {
         $container = new Picotainer([

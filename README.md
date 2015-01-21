@@ -61,8 +61,8 @@ The container is the "delegate-lookup container" if it was passed as the second 
 or the Picotainer instance itself if no delegate lookup container was passed.
 
 
-Fetching entries in the container
----------------------------------
+Fetching entries from the container
+-----------------------------------
 
 Fetching entries from the container is as simple as calling the `get` method:
 
