@@ -6,9 +6,9 @@ Picotainer
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/thecodingmachine/picotainer/badges/quality-score.png?b=1.0)](https://scrutinizer-ci.com/g/thecodingmachine/picotainer/?branch=1.0)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/3ac43eac-dcec-496a-9e0f-5fe82f8b3824/mini.png)](https://insight.sensiolabs.com/projects/3ac43eac-dcec-496a-9e0f-5fe82f8b3824)
 [![Build Status](https://travis-ci.org/thecodingmachine/picotainer.svg?branch=1.0)](https://travis-ci.org/thecodingmachine/picotainer)
-[![Coverage Status](https://coveralls.io/repos/thecodingmachine/picotainer/badge.svg)](https://coveralls.io/r/thecodingmachine/picotainer)
+[![Coverage Status](https://coveralls.io/repos/thecodingmachine/picotainer/badge.svg?branch=1.0)](https://coveralls.io/r/thecodingmachine/picotainer?branch=1.0)
 
-This package contains a really minimalist dependency injection container (24 lines of code!) compatible with 
+This package contains a really minimalist dependency injection container (24 lines of code!) compatible with
 [container-interop](https://github.com/container-interop/container-interop) (supports ContainerInterface and
 delegate lookup feature).
 
