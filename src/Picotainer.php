@@ -64,6 +64,6 @@ class Picotainer implements ContainerInterface
      */
     public function has($identifier)
     {
-        return isset($this->callbacks[$identifier]);
+        return isset($this->callbacks[$identifier]) || isset($this->objects[$identifier]);
     }
 }
