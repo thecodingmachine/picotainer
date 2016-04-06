@@ -13,20 +13,21 @@ class Picotainer implements ContainerInterface
 {
 
     /**
-     * The delegate lookup
+     * The delegate lookup.
+     *
      * @var ContainerInterface
      */
     protected $delegateLookupContainer;
 
     /**
-     * The array of closure defining each entry of the container.
+     * The array of closures defining each entry of the container.
      *
      * @var array<string, Closure>
      */
     protected $callbacks;
 
     /**
-     * The array of entries once they have been instanciated.
+     * The array of entries once they have been instantiated.
      *
      * @var array<string, mixed>
      */
@@ -35,8 +36,8 @@ class Picotainer implements ContainerInterface
     /**
      * Instantiate the container.
      *
-     * @param array<string, Closure> $entries                 Entries must be passed as an array of anonymous functions
-     * @param ContainerInterface     $delegateLookupContainer Optionnal delegate lookup container.
+     * @param array<string, Closure> $entries                 Entries must be passed as an array of anonymous functions.
+     * @param ContainerInterface     $delegateLookupContainer Optional delegate lookup container.
      */
     public function __construct(array $entries, ContainerInterface $delegateLookupContainer = null)
     {
