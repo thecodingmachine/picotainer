@@ -15,7 +15,7 @@ class PicotainerTest extends \PHPUnit_Framework_TestCase
                 "instance" => function () { return "value"; },
         ]);
 
-        $this->assertEquals('value', $container->get('instance'));
+        $this->assertSame('value', $container->get('instance'));
     }
 
     /**
@@ -39,7 +39,7 @@ class PicotainerTest extends \PHPUnit_Framework_TestCase
                 "instance2" => function ($container) { return $container->get('instance'); },
         ], $container);
 
-        $this->assertEquals('value', $container2->get('instance2'));
+        $this->assertSame('value', $container2->get('instance2'));
     }
 
     public function testOneInstanceOnly()
@@ -51,7 +51,7 @@ class PicotainerTest extends \PHPUnit_Framework_TestCase
         $instance1 = $container->get('instance');
         $instance2 = $container->get('instance');
 
-        $this->assertEquals($instance1, $instance2);
+        $this->assertSame($instance1, $instance2);
     }
 
     public function testHas()
