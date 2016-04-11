@@ -18,8 +18,8 @@
 		"container-interop/container-interop" : "~1.0"
 	},
 	"require-dev" : {
-		"phpunit/phpunit" : "~3.7",
-		"satooshi/php-coveralls": "dev-master"
+		"phpunit/phpunit" : "~4.8",
+		"satooshi/php-coveralls": "~1.0"
 	},
 	"autoload" : {
 		"psr-4" : {
