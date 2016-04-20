@@ -35,7 +35,7 @@ The `Picotainer` class takes 2 parameters:
 - an optional [delegate-lookup container](https://github.com/container-interop/container-interop/blob/master/docs/Delegate-lookup.md)
 
 ```php
-use Mouf\Picotainer;
+use Mouf\Picotainer\Picotainer;
 use Interop\Container\ContainerInterface;
 
 $container = new Picotainer([
