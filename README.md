@@ -8,7 +8,7 @@ Picotainer
 [![Build Status](https://travis-ci.org/thecodingmachine/picotainer.svg?branch=1.0)](https://travis-ci.org/thecodingmachine/picotainer)
 [![Coverage Status](https://coveralls.io/repos/thecodingmachine/picotainer/badge.svg?branch=1.0)](https://coveralls.io/r/thecodingmachine/picotainer?branch=1.0)
 
-This package contains a really minimalist dependency injection container (24 lines of code!) compatible with
+This package contains a really minimalist dependency injection container (26 lines of code!) compatible with
 [container-interop](https://github.com/container-interop/container-interop) (supports ContainerInterface and
 delegate lookup feature).
 
