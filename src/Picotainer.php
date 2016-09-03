@@ -56,8 +56,11 @@ class Picotainer implements ContainerInterface
         if (!isset($this->callbacks[$identifier])) {
             throw new PicotainerNotFoundException(sprintf('Identifier "%s" is not defined.', $identifier));
         }
-
-        return $this->objects[$identifier] = $this->callbacks[$identifier]($this->delegateLookupContainer);
+        try {
+            return $this->objects[$identifier] = $this->callbacks[$identifier]($this->delegateLookupContainer);
+        } catch (PicotainerNotFoundException $e) {
+            throw new MissingDependencyException(sprintf('Entry "%s" cannot be constructed because a dependency is missing.', $identifier, $e));
+        }
     }
 
     /* (non-PHPdoc)
