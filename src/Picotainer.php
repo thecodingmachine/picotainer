@@ -1,7 +1,8 @@
 <?php
 namespace Mouf\Picotainer;
 
-use Interop\Container\ContainerInterface;
+use Interop\Container\ContainerInterface as ContainerInteropContainer;
+use Psr\Container\ContainerInterface as Psr11Container;
 
 /**
  * This class is a minimalist dependency injection container.
@@ -9,13 +10,13 @@ use Interop\Container\ContainerInterface;
  *
  * @author David Négrier <david@mouf-php.com>
  */
-class Picotainer implements ContainerInterface
+class Picotainer implements ContainerInteropContainer, Psr11Container
 {
 
     /**
      * The delegate lookup.
      *
-     * @var ContainerInterface
+     * @var Psr11Container
      */
     protected $delegateLookupContainer;
 
@@ -37,9 +38,9 @@ class Picotainer implements ContainerInterface
      * Instantiate the container.
      *
      * @param array<string, Closure> $entries                 Entries must be passed as an array of anonymous functions.
-     * @param ContainerInterface     $delegateLookupContainer Optional delegate lookup container.
+     * @param Psr11Container         $delegateLookupContainer Optional delegate lookup container.
      */
-    public function __construct(array $entries, ContainerInterface $delegateLookupContainer = null)
+    public function __construct(array $entries, Psr11Container $delegateLookupContainer = null)
     {
         $this->callbacks = $entries;
         $this->delegateLookupContainer = $delegateLookupContainer ?: $this;
