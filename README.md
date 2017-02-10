@@ -10,7 +10,8 @@ Picotainer
 
 This package contains a really minimalist dependency injection container (24 lines of code!) compatible with
 [container-interop](https://github.com/container-interop/container-interop) (supports ContainerInterface and
-delegate lookup feature).
+delegate lookup feature).  It is also, therefore, compatible with
+[PSR-11](https://github.com/php-fig/fig-standards/blob/master/proposed/container.md), the FIG container standard.
 
 Picotainer is heavily influenced by the [Pimple DI container](http://pimple.sensiolabs.org/). Think about it
 as a Pimple container with even less features, and ContainerInterop compatibility.
@@ -36,7 +37,7 @@ The `Picotainer` class takes 2 parameters:
 
 ```php
 use Mouf\Picotainer\Picotainer;
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 
 $container = new Picotainer([
 	"myInstance"=>function(ContainerInterface $container) {
