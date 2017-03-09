@@ -22,13 +22,25 @@ class PicotainerTest extends \PHPUnit_Framework_TestCase
      *
      * @expectedException Mouf\Picotainer\PicotainerNotFoundException
      */
-    public function testGetException()
+    public function testGetNotFoundException()
     {
         $container = new Picotainer([]);
 
         $container->get('nonexistant');
     }
 
+    /**
+     *
+     * @expectedException Mouf\Picotainer\MissingDependencyException
+     */
+    public function testGetMissingDependencyException()
+    {
+        $container = new Picotainer([
+            "instance" => function ($container) { return $container->get('nonfound'); },
+        ]);
+
+        $container->get('instance');
+    }
     public function testDelegateContainer()
     {
         $container = new Picotainer([
